@@ -21,7 +21,7 @@ class ProcessModuleCleaner extends Process implements Module
             'title' => 'Module Folder Cleaner',
             'summary' => 'Deletes old module directories (.ModuleName) directly.',
             'href' => 'https://github.com/markusthomas/ProcessModuleCleaner',
-            'version' => '001',
+            'version' => '002',
             'author' => 'Markus Thomas',
             'license' => 'MIT',
             'icon' => 'trash',
