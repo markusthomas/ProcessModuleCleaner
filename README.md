@@ -23,7 +23,7 @@ These directories are often created by ProcessWire during module upgrades or uni
 2.  If any orphaned folders are found, they will be listed.
 3.  Select the folders you want to remove and click **Delete Selected**.
 
-![ProcessModuleCleaner Module](./thumb.png)
+![ProcessModuleCleaner Module](https://github.com/markusthomas/ProcessModuleCleaner/blob/main/thumb.png)
 
 ## License
 
