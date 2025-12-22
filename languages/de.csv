@@ -1,0 +1,12 @@
+en,default,description,file,hash
+"No orphaned module folders found.","Keine verwaisten Modulordner gefunden.",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,6c8e5429ced537966d37fc1e83ea2737
+"Delete Module Folders","Modulordner löschen",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,9fd6588cc53a85fb414dabe96f1193d8
+"Directory Name","Verzeichnis Name",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,70aaa3c0a8dc9c8b2be3bef1c45d1824
+"Last Modified","Zuletzt modifiziert",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,84ba4cf46c874b0b5951eb3b75298329
+"Are you sure you want to permanently delete the selected folders?","Sind Sie sicher, dass Sie die ausgewählten Ordner dauerhaft löschen wollen?",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,1faf7a63c2e4904d3b955e8a42c11449
+"Delete Selected","Ausgewählte löschen",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,c13af79d63bfcb3f07bc3810418c99f8
+"No folders selected.","Keine Ordner ausgewählt.",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,c792cc3751b47265df7afa96547828ea
+"Successfully deleted %d folders.","%d Ordner erfolgreich gelöscht.",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,d6cc0dd8bf49cb73017c96263c7a16f8
+"Module Folder Cleaner",,,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,ca30cfc1f8e3397a18555ff1eb745bd2
+"Deletes old module directories (.ModuleName) directly.","Löscht alte Modulverzeichnisse (.Modulname) direkt.",,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,5938b0f5ea96b33c75f96c0dbddfb035
+"Module Cleaner",,,site/modules/ProcessModuleCleaner/ProcessModuleCleaner.module.php,ed31a267e8f7d753874d1d5231c1e4ca

@@ -18,10 +18,10 @@ class ProcessModuleCleaner extends Process implements Module
     public static function getModuleInfo()
     {
         return [
-            'title' => 'Module Folder Cleaner',
-            'summary' => 'Deletes old module directories (.ModuleName) directly.',
+            'title' => __('Module Folder Cleaner'),
+            'summary' => __('Deletes old module directories (.ModuleName) directly.'),
             'href' => 'https://github.com/markusthomas/ProcessModuleCleaner',
-            'version' => '002',
+            'version' => '010',
             'author' => 'Markus Thomas',
             'license' => 'MIT',
             'icon' => 'trash',
@@ -29,7 +29,7 @@ class ProcessModuleCleaner extends Process implements Module
             'page' => [
                 'name' => 'module-cleaner',
                 'parent' => 'setup',
-                'title' => 'Module Cleaner'
+                'title' => __('Module Cleaner')
             ],
             'requires' => 'ProcessWire>=3.0.0'
         ];
@@ -47,7 +47,7 @@ class ProcessModuleCleaner extends Process implements Module
         $hiddenFolders = $this->findHiddenFolders($modulesPath);
 
         if (empty($hiddenFolders)) {
-            return "<div class='uk-alert-success' uk-alert><p>No orphaned module folders found.</p></div>";
+            return "<div class='uk-alert-success' uk-alert><p>" . $this->_('No orphaned module folders found.') . "</p></div>";
         }
 
         return $this->renderFolderTable($hiddenFolders);
@@ -94,7 +94,7 @@ class ProcessModuleCleaner extends Process implements Module
 
         $out = "
         <div class='uk-card uk-card-default uk-card-body' x-data='{ selectedFolders: [] }'>
-            <h3 class='uk-card-title'><i class='fa fa-folder-open-o'></i> Delete Module Folders</h3>
+            <h3 class='uk-card-title'><i class='fa fa-folder-open-o'></i> " . $this->_('Delete Module Folders') . "</h3>
 
             <form action='{$deleteUrl}' method='POST'>
                 <input type='hidden' name='{$tokenName}' value='{$tokenValue}'>
@@ -105,8 +105,8 @@ class ProcessModuleCleaner extends Process implements Module
                             <th class='uk-table-shrink'>
                                 <input class='uk-checkbox' type='checkbox' @change=\"if (\$el.checked) { selectedFolders = " . htmlspecialchars(json_encode(array_column($folders, 'name'))) . " } else { selectedFolders = [] }\">
                             </th>
-                            <th>Directory Name</th>
-                            <th>Last Modified</th>
+                            <th>" . $this->_('Directory Name') . "</th>
+                            <th>" . $this->_('Last Modified') . "</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -127,8 +127,8 @@ class ProcessModuleCleaner extends Process implements Module
                 </table>
 
                 <div class='uk-margin-top'>
-                    <button type='submit' class='uk-button uk-button-danger' :disabled='selectedFolders.length === 0' onclick=\"return confirm('Are you sure you want to permanently delete the selected folders?')\">
-                        <i class='fa fa-trash'></i> Delete Selected (<span x-text='selectedFolders.length'>0</span>)
+                    <button type='submit' class='uk-button uk-button-danger' :disabled='selectedFolders.length === 0' onclick=\"return confirm('" . $this->_('Are you sure you want to permanently delete the selected folders?') . "')\">
+                        <i class='fa fa-trash'></i> " . $this->_('Delete Selected') . " (<span x-text='selectedFolders.length'>0</span>)
                     </button>
                 </div>
             </form>
@@ -158,7 +158,7 @@ class ProcessModuleCleaner extends Process implements Module
         $successCount = 0;
 
         if (empty($folders)) {
-            $this->error("No folders selected.");
+            $this->error($this->_("No folders selected."));
             $this->wire('session')->redirect("../");
         }
 
@@ -172,7 +172,7 @@ class ProcessModuleCleaner extends Process implements Module
             }
         }
 
-        $this->message("Successfully deleted $successCount folders.");
+        $this->message(sprintf($this->_("Successfully deleted %d folders."), $successCount));
         $this->wire('session')->redirect("../");
     }
 }

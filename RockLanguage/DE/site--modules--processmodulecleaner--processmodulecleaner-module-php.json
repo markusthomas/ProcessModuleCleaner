@@ -1,0 +1,33 @@
+{
+    "file": "site\/modules\/ProcessModuleCleaner\/ProcessModuleCleaner.module.php",
+    "textdomain": "site--modules--processmodulecleaner--processmodulecleaner-module-php",
+    "translations": {
+        "6c8e5429ced537966d37fc1e83ea2737": {
+            "text": "Keine verwaisten Modulordner gefunden."
+        },
+        "9fd6588cc53a85fb414dabe96f1193d8": {
+            "text": "Modulordner l\u00f6schen"
+        },
+        "70aaa3c0a8dc9c8b2be3bef1c45d1824": {
+            "text": "Verzeichnis Name"
+        },
+        "84ba4cf46c874b0b5951eb3b75298329": {
+            "text": "Zuletzt modifiziert"
+        },
+        "1faf7a63c2e4904d3b955e8a42c11449": {
+            "text": "Sind Sie sicher, dass Sie die ausgew\u00e4hlten Ordner dauerhaft l\u00f6schen wollen?"
+        },
+        "c13af79d63bfcb3f07bc3810418c99f8": {
+            "text": "Ausgew\u00e4hlte l\u00f6schen"
+        },
+        "c792cc3751b47265df7afa96547828ea": {
+            "text": "Keine Ordner ausgew\u00e4hlt."
+        },
+        "d6cc0dd8bf49cb73017c96263c7a16f8": {
+            "text": "%d Ordner erfolgreich gel\u00f6scht."
+        },
+        "5938b0f5ea96b33c75f96c0dbddfb035": {
+            "text": "L\u00f6scht alte Modulverzeichnisse (.Modulname) direkt."
+        }
+    }
+}
