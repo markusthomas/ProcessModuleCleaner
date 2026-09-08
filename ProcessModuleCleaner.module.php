@@ -21,7 +21,7 @@ class ProcessModuleCleaner extends Process implements Module
             'title' => __('Module Folder Cleaner'),
             'summary' => __('Deletes old module directories (.ModuleName) directly.'),
             'href' => 'https://github.com/markusthomas/ProcessModuleCleaner',
-            'version' => '020',
+            'version' => '021',
             'author' => 'Markus Thomas',
             'license' => 'MIT',
             'icon' => 'trash',
@@ -220,7 +220,7 @@ class ProcessModuleCleaner extends Process implements Module
                     $type = 'dir';
                 }
             } else {
-                if (strpos($name, '.index-') === 0 && substr($name, -4) === '.php') {
+                if ((strpos($name, '.index-') === 0 || strpos($name, 'index-') === 0) && substr($name, -4) === '.php') {
                     $match = true;
                     $type = 'file';
                 } elseif (strpos($name, 'htaccess-') === 0 && substr($name, -4) === '.txt') {
@@ -389,7 +389,7 @@ class ProcessModuleCleaner extends Process implements Module
                     $isValid = true;
                 }
             } else {
-                if (strpos($name, '.index-') === 0 && substr($name, -4) === '.php') {
+                if ((strpos($name, '.index-') === 0 || strpos($name, 'index-') === 0) && substr($name, -4) === '.php') {
                     $isValid = true;
                 } elseif (strpos($name, 'htaccess-') === 0 && substr($name, -4) === '.txt') {
                     $isValid = true;
